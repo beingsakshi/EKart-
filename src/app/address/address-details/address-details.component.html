@@ -1,0 +1,30 @@
+
+
+<table border="2px" class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Pincode</th>
+            <th>Contact No</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let add of address">          
+            <td> {{add.address}} </td>
+            <td> {{add.city}} </td>
+            <td> {{add.state}} </td>
+            <td> {{add.pincode}} </td>
+            <td> {{add.contact}} </td>
+            <div #id> {{add.aid}}</div>
+            <!-- <td [(ngModel)]="aid"> {{add.aid}} </td> -->
+            <!-- <td><a class="btn btn-primary btn-small navbar-btn" [routerLink]='["/addressUpdate"]' routerLinkActive="active">{{ title1 }}</a></td> -->
+            <td><button type="delete" class="btn btn-primary" (click)="updateUser(id)">Up User</button></td>
+            <td><button type="delete" class="btn btn-primary" (click)="deleteUser(id)">Delete User</button></td>
+        </tr>
+    </tbody>
+    
+</table>
+
+<a class="btn btn-primary btn-small navbar-btn" [routerLink]='["/address"]' routerLinkActive="active">{{ title }}</a>
